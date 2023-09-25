@@ -3,15 +3,14 @@ import Home from './home/Home'
 
 
 function App() {
-    // <Router>
-    //     <Routes>
-    //         <Route path={'/'} component={Home}/>
-    //     </Routes>
-    // </Router>
-    <div className='h-[100vh] w-[100vw]'>
-        <Home />
-    </div>
-
+return (
+    <Router>
+        <Routes>
+            <Route path={'/'} component={Home}/>
+        </Routes>
+    </Router>
+    
+)
   
 }
 export default App
