@@ -9,11 +9,13 @@ function Home() {
         <div class="w-[85%] h-[30px] flex mt-3">
             <input type="search" id="sear" class="w-full text-black h-full  p-2"></input></div>
        </div>
-       <div class="w-[screen] h-[140px] bg-amber-300 flex justify-center items-center ">
-        <div class="w-[80px] h-[80px] rounded-[50%] bg-white m-2"></div>
-        <div class="w-[80px] h-[80px] rounded-[50%] bg-white m-2"></div>
-        <div class="w-[80px] h-[80px] rounded-[50%] bg-white m-2"></div>
-        <div class="w-[80px] h-[80px] rounded-[50%] bg-white m-2"></div>
+       <div class="w-[screen] h-[140px] bg-amber-300 flex items-center overflow-x-scroll mx-5">
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
+        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2"></div>
        </div>
        <div class="w-[screen] h-[20px] flex justify-center items-center mt-3">
         <div class="w-[90%] h-[15px] bg-amber-300 flex items-center text-xs font-bold">Veg</div>

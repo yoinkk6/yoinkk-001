@@ -1,16 +1,12 @@
-import {Route, Routes, Router} from '@solidjs/router'
+import {Route, Routes} from '@solidjs/router'
 import Home from './home/Home'
 
 
 function App() {
-return (
-    <Router>
+    return (
         <Routes>
             <Route path={'/'} component={Home}/>
         </Routes>
-    </Router>
-    
-)
-  
+    )
 }
 export default App
