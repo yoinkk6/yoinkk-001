@@ -1,5 +1,5 @@
 import Comp1 from "../comp/Comp1"
-import ToggleButton from "../comp/ToggleButton"
+
 function Home() {
   return (
     <div class='bg-black h-[100vh] w-[100vw]'>
@@ -52,8 +52,9 @@ function Home() {
        <div class="w-[screen] h-[24px] flex justify-center items-center mt-3">
         <div class="w-[100%] h-[100%] bg-yellow-300 flex items-center text-xs font-bold pl-5">Veg</div>
        </div>
+
        <div class="w-[screen] h-[50%] bg-black flex flex-col justify-center items-center">
-        <div class="w-[90%] h-[18px] flex items-center text-amber-300 mt-2">Recommended Items</div>
+        <div class="w-[90%] h-[18px] flex items-center text-amber-300 mt-2 font-bold">Recommended Items</div>
         <div class="w-[90%] h-[100%] flex items-center  flex-col">
             <Comp1 />
             <Comp1 />
