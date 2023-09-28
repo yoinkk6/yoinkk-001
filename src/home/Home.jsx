@@ -1,7 +1,9 @@
 import Comp1 from "../comp/Comp1"
 // import { createSignal } from "solid-js"
 import { puffs } from "../data/puffs"
-import { For } from "solid-js"
+import { photo } from "../data/photo"
+import HeadComp from "../comp/HeadComp"
+import { For, Show } from "solid-js"
 
 function Home() {
   // const[Data,setData]=createSignal("puffs")
@@ -14,75 +16,19 @@ function Home() {
 
             <div class="w-[90%] h-[38px] flex items-center mt-3">
             <input type="search" id="search" class="w-full text-black h-full rounded-2xl  pl-12" placeholder="search for items ..."></input></div>
-
-
        </div>
        
-       <div class="w-screen h-[140px] bg-yellow-300 flex items-center overflow-x-scroll">
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/puffs/egg-puffs.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/mojito/blue-mojito.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/biryani/chicken-biryani.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/fried-rice/chicken-rice.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/noodles/chicken-noodles.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/hot-beverages/chai.jpg')] bg-cover"
-        ></div>
-        
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/milkshake/butterscotch-milkshake.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/dry-items/chicken-65.JPG')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/bread-omblet/bread-omblet.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/porota-roll/chicken-porota-roll.jpg')] bg-cover"
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/chapathi-roll/egg-chapathi-roll.jpg')] bg-cover "
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/maggi/Maggi-Noodles-veg.jpg')] bg-cover "
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/juice/Lime-Juice.jpg')] bg-cover "
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/norukals/garlic-Thattu-Vadai.jpg')] bg-cover "
-        ></div>
-
-        <div class="w-[80px] h-[80px] flex-shrink-0 rounded-[50%] bg-white m-2 bg-[url('./src/assets/sandwich/chicken-sandwitch.jpg')] bg-cover "
-        ></div>
-        
-
-       </div>
-
-       <div class="w-[screen] h-[24px] flex justify-center items-center mt-3">
-        <div class="w-[100%] h-[100%] bg-yellow-300 flex items-center text-xs font-bold pl-5">Veg</div>
-       </div>
-
-       <div class="w-[screen] h-[50%] bg-black flex flex-col justify-center items-center">
-        <div class="w-[90%] h-[18px] flex items-center text-amber-300 mt-2 font-bold">Recommended Items</div>
-        <div class="w-[85%] h-[100%] flex items-center  flex-col overflow-y-scroll mb-4">
-          <For each={puffs}> 
-            <Comp1 
-            name={puffs.name}
-            price={puffs.price}
-            img={puffs.image}/>
-          </For> 
-        </div>       
-       </div>
+      <div class="w-screen h-[90%] flex flex-col">
+       <For each={photo}> 
+          {(photo) => (
+            <Show when={photo} >
+            <HeadComp 
+            image={photo.image}
+            name={photo.name}/>
+            </Show>
+          )}     
+        </For> 
+      </div> 
     </div>
   )
 }
