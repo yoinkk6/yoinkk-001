@@ -17,17 +17,24 @@ function Comp1(props) {
         </div>
         <div class="h-[33%] w-[50%] absolute bg-black rounded-md bg-opacity-[0.8] 
         flex items-center justify-center text-amber-300 text-xs mt-[50%]"><button className="w-[33.33%] h-full" type="submit" onClick={()=>{
-          props.cart.pop()
-          setCount(props.totalItems)
+          
+          if(count()>0){
+            setCount(count()-1)
+            
+          }
+          if(count()===0){
+            setCount(0)
+            props.setBool(false)
+          }
         }}>-</button>
         <div>{count}</div>
         <button className="w-[33.33%] h-full" onClick={()=>{
-          props.cart.push({})
-          setCount(props.totalItems)
+          setCount(count()+1);
+          props.setBool(true)
         }}>+</button></div>
         
       </div>
-     
+      
     </div>
   )
 }
