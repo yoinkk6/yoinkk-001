@@ -1,12 +1,11 @@
-import {Route, Routes} from '@solidjs/router'
-import Home from './home/Home'
+import { createSignal } from "solid-js"
+import Home from "./home/Home"
 
-
-function App() {
-    return (
-        <Routes>
-            <Route path={'/'} component={Home}/>
-        </Routes>
-    )
+const App = () => {
+  const [] = createSignal(0)
+  return (
+    <Home/>
+  )
 }
+
 export default App
